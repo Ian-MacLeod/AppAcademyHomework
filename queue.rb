@@ -11,7 +11,6 @@ class Deque
   end
 
   def first
-    byebug if self[0].nil?
     self[0]
   end
 
