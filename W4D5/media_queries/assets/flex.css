@@ -83,6 +83,44 @@ nav ul li a {
     display: block;
 }
 
+.hamburger-dropdown > li {
+  position: relative;
+  display: none;
+  height: 50px;
+  width: 50px;
+  background: url(hamburger.png);
+  background-size: cover;
+}
+
+.hamburger-dropdown ul {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+  background: white;
+  border: 1px solid grey;
+  box-shadow: 2px 2px 7px black;
+}
+
+.hamburger-dropdown > li:hover ul {
+  display: flex;
+}
+
+.hamburger-dropdown li a:hover {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 900px) {
+  .hamburger-dropdown > li{
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
 body {
   margin: 0 auto;
     width: 60%;
