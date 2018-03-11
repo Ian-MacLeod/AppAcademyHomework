@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @hide_header_signup = true
     render :new
   end
 
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
       redirect_to bands_url
     else
       flash.now[:errors] = @user.errors.full_messages
+      @hide_header_signup = true
       render :new
     end
   end

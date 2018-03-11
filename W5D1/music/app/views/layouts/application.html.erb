@@ -20,7 +20,9 @@
         </form>
       <% else %>
         <a href="<%= new_session_url %>">Log In</a>
-        <a href="<%= new_user_url %>">Sign Up</a>
+        <% unless @hide_header_signup %>
+          <a href="<%= new_user_url %>">Sign Up</a>
+        <% end %>
       <% end %>
     </header>
     <% if flash.key?(:errors) %>
